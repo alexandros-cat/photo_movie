@@ -46,6 +46,7 @@ header {
   margin-top: 50px;
 }
 
+
 .global-nav {
   float: right;
   margin-top: 60px;
@@ -59,6 +60,11 @@ header {
   font-family: 'Bitter', serif;
 }
 
+.global-nav li .user-nickname {
+  list-style: none;
+  font-family: 'Bitter', serif;
+  color: aqua;
+}
 .global-nav li a {
   color: #ffffff;
 }

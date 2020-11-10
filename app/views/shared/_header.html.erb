@@ -4,6 +4,9 @@
   </div>
   <nav>
     <ul class = "global-nav">
+    <% if user_signed_in? %>   
+      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+    <%end%>
       <li><a href = "#">About</a></li>
       <li><a href = "#">Everyone</a></li>
       <li><a href = "#">My page</a></li>
