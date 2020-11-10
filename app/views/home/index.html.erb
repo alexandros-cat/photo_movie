@@ -11,10 +11,11 @@
        <h1>Let's go  adventure !</h1>
      </div>
     <% if user_signed_in? %>      
-        <p class="btn"><a href="#">Log out</a></p>
-         <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+        <%# <p class="btn"><a href= "/users/sign_out">Log out</a></p> %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class:"btn"%></li>
     <% else %>
-        <p class="btn"><a href="#">Log in</a></p>
+        <p class="btn"><a href="/users/sign_in">Log in</a></p>
         <a href = "/users/sign_up">Please creative account</a>      
     <% end %>
     </div>

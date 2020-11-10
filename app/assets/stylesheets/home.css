@@ -106,6 +106,20 @@ footer small {
   border: 3px solid #009cd3;
 }
 
+#home li .btn {
+  background-color: #009cd3;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Bitter', serif;
+  width: 185px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 0px;
+  margin-left: 100px;
+  border-radius: 5px;
+  border: 3px solid #009cd3;
+}
 .btn a:hover {
   text-decoration: none;
   background-color: #ffffff;
