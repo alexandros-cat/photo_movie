@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   resources :home, only: :index do
     resources :posts
   end
-
 end

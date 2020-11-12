@@ -1,14 +1,15 @@
 <body id="post">
-   
-  <header>
-    <%= render "shared/header" %>
-  </header>
+  
+  <%= render "shared/header" %>
+  
   
   <div id = "wrap">
     <div class ="content"> 
       <h1>動画投稿一覧</h1> 
       <% @posts.each do |post| %>
-        <%= video_tag post.movie, :autoplay => true, :loop => true, muted: => true, class: "video-size"  %>
+         <li class='list'>
+          <%= video_tag post.movie, controls: true, autobuffer: true, loop: true, class: "post-img" %>
+        
           <div class='post-info'>
             <h3 class='post-title'>
               <%=post.title %>
@@ -17,19 +18,16 @@
               <span><%= post.category%></span>
             </div>
           </div>
-       <%end%>
-      <%if user_signed_in? %>
-        <div class='post-btn'>
-          <span class='post-btn-text'>Post</span>
-          <%=link_to "#" do%>
-            <%= image_tag 'upload.png' , size: '185x50' ,class: "post-btn-icon" %>
-          <%end%>
-        </div> 
-      <%end%> 
-    </div>  
-  </div> 
-  <footer>
-      <%= render "shared/footer" %>
-  </footer>
-  
+           </li>
+      <%end%>
+    
+  <% if user_signed_in? %>
+    <div class='post-btn'>
+    <%=link_to "#" do%>
+      <span class='post-btn-text'>POST</span>
+      <%end%>
+    </div>   
+  <% end %>
+
+  <%= render "shared/footer" %>
 </body>
