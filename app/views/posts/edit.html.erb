@@ -1,0 +1,69 @@
+<body id="post">
+ <div class="posts-contents">
+  <header>
+    <%= render "shared/header" %>
+  </header>
+
+  <div id="newer" class="posts-main">
+    <h2 class="posts-title">投稿内容を編集</h2>
+  <%= form_with(model:@post,url: "#", local: true )do |f| %>
+    
+    <%# <%=render 'shared/error_messages',model:  f.object %> 
+    
+    <%# 投稿動画 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        Movie
+        <span class="indispensable">indispensable</span>
+      </div>
+     <div class="click-upload">
+        <p>
+          Please click
+        </p>
+        <%= f.file_field :movie, :accept => 'video/*', id:"post-movie" %>
+      </div>
+    </div> 
+     <%# /投稿動画 %>
+     
+    <%# タイトルと投稿説明 %>
+    <div class="new-posts"> 
+      <div class="weight-bold-text">
+        title
+        <span class="indispensable">indispensable</span>
+      </div>
+      <%= f.text_area :title, class:"posts-text", id:"item-name", placeholder:"タイトル（必須 30文字まで)", maxlength:"30" %>
+      <div class="posts-explain">
+        <div class="weight-bold-text">
+          contents
+          <span class="indispensable">indispensable</span>
+        </div>
+        <%= f.text_area :contents, class:"posts-text", id:"item-info", placeholder:"投稿内容の説明（必須 1,00文字まで）例）2019年の夏に訪れた雪山です。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div> 
+    <%# タイトルと投稿説明 %>
+
+     <%# カテゴリー %>
+    <div class="posts-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          Category
+          <span class="indispensable">indispensable</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+    </div>
+     <%# カテゴリー %>
+     <%# 下部ボタン %>
+     <div class="post-btn-contents">
+      <%= f.submit "update" ,class:"posts-btn" %>
+      <%=link_to 'Return',"#", class:"back-btn" %>
+    </div>
+   <%# 下部ボタン %>
+  <% end %>
+</div>
+
+  <footer>
+      <%= render "shared/footer" %>
+  </footer>
+  </div>
+</body>
