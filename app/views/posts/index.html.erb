@@ -23,7 +23,7 @@
     
   <% if user_signed_in? %>
     <div class='post-btn'>
-    <%=link_to "#" do%>
+    <%=link_to "/home/:home_id/posts/new" do%>
       <span class='post-btn-text'>POST</span>
       <%end%>
     </div>   
