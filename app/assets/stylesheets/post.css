@@ -48,4 +48,11 @@
   width: 100%;
 }
 
-
+#post #wrap {
+  background-color: transparent;
+  margin-top: 0;
+  padding: 0;
+}
+#post #wrap a {
+  margin-left: 150px;
+}

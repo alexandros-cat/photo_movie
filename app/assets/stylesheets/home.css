@@ -87,11 +87,14 @@ header {
   margin: 0 auto;
 }
 
-footer {
+footer{
+  width: 100%;
+  color: #fff;
   text-align: center;
-  color: #ffffff;
-  padding: 20px 0;
-  background-color: #767671;
+  padding: 30px 0;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  background-color: transparent;
 }
 
 footer small {
@@ -131,12 +134,7 @@ footer small {
   background-color: #ffffff;
   color: #009cd3;
 }
-#home footer {
-  width: 960px;
-  margin: 150px auto 0 auto;
-  text-align: left;
-  background-color: transparent;
-}
+
 
 #home {
   background-image: url("sky.png");

@@ -1,7 +1,8 @@
 <body id="post">
   
+  <header>
   <%= render "shared/header" %>
-  
+  </header>
   
   <div id = "wrap">
     <div class ="content"> 
@@ -20,7 +21,8 @@
           </div>
            </li>
       <%end%>
-    
+    </div> 
+  </div> 
   <% if user_signed_in? %>
     <div class='post-btn'>
     <%=link_to "/home/:home_id/posts/new" do%>
@@ -29,5 +31,7 @@
     </div>   
   <% end %>
 
+  <footer>
   <%= render "shared/footer" %>
+   </footer>
 </body>
