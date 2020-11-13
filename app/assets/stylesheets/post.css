@@ -7,7 +7,6 @@
 }
 
 .post-info {
-  background-color: #FFF;
   color: black;
   padding: 1vw;
 }
@@ -202,5 +201,11 @@
 }
 #post .content {
   width: 300px;
+}
 
+
+.post-lists>.list {
+  width: 35vh;
+  padding: 1vw;
+  background-color: rgb(37, 233, 112);
 }
