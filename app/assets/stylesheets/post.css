@@ -200,3 +200,7 @@
   flex-direction: column;
   min-width: 500px;
 }
+#post .content {
+  width: 300px;
+
+}
