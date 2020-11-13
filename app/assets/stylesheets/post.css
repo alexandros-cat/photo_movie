@@ -202,10 +202,12 @@
 #post .content {
   width: 300px;
 }
-
+.list {
+  list-style: none;
+}
 
 .post-lists>.list {
   width: 35vh;
   padding: 1vw;
-  background-color: rgb(37, 233, 112);
+  background : linear-gradient(135deg, rgba(102, 102, 255, 0.39), rgba(102, 255, 102, 0.71), rgba(255, 255, 26, 0.70));
 }
