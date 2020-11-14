@@ -211,3 +211,7 @@
   padding: 1vw;
   background : linear-gradient(135deg, rgba(102, 102, 255, 0.39), rgba(102, 255, 102, 0.71), rgba(255, 255, 26, 0.70));
 }
+.post-img {
+  width: 33vh;
+  height: 20vh;
+  }
