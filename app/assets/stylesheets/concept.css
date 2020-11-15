@@ -1,0 +1,32 @@
+#concept  li{ 
+  list-style: none;
+}
+
+#concept .content { 
+  display: flex ;
+  justify-content: space-between;
+}
+#concept  .main p{ 
+ margin-left: 20px;
+}
+
+#concept #wrap{ 
+  background-color:transparent;
+  margin-top: 150px;
+}
+#concept  .main{ 
+  width:700px;
+  margin:0 10px;
+ 
+  color: white;
+}
+
+
+#concept {
+  background-image: url("ocean.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+

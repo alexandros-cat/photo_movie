@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :home, only: :index do
     resources :posts
+    resources :concept
   end
 end
