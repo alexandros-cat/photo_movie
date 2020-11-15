@@ -215,3 +215,138 @@
   width: 33vh;
   height: 20vh;
   }
+/* ------------------------------------- */
+/* 投稿の概要 */
+
+.post-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.post-box {
+  background-color: #fff;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.psot-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.post-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+}
+
+.post-red-btn {
+  text-align: center;
+  background-color: lightsalmon;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 10px 0px;
+  padding: 2vh 10vw;
+  border-radius: 50px;
+}
+
+.or-text {
+  font-size: 20px;
+}
+
+.post-destroy {
+  background-color: lightgray;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  margin: 0 0 20px 0;
+  padding: 2vh 10vw;
+  border-radius: 50px;
+}
+
+.post-explain-box {
+  font-size: 18px;
+  margin: 40px 0px;
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-post {
+  width: 20%;
+  background-color: lightsalmon;
+  border: 1px solid lightsalmon;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid lightsalmon;
+  font-size: 14px;
+}
+/* -------投稿の詳細を確認------------------------------ */
+
+/* 商品の概要 */
+
+
+.post-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.post-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+

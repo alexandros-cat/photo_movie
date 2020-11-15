@@ -1,0 +1,32 @@
+<body id="post">
+  
+  <header>
+  <%= render "shared/header" %>
+  </header>
+
+    <div class='post-img-content'>
+     <%= video_tag @post.movie, controls: true, autobuffer: true, class:"post-box-img" %>
+    </div>       
+    
+    <h2 class="name">
+      <%= @post.title %>
+    </h2>
+
+    <table class="detail-table">
+      <tbody>
+         <tr>
+          <th class="detail-post">content</th>
+          <td class="detail-value"><%=@post.content %>
+        </tr>
+        <tr>
+          <th class="detail-post">category</th>
+          <td class="detail-value"><%= @post.category.name %>
+        </tr>
+      </tbody>
+    </table> 
+  
+  <footer>
+  <%= render "shared/footer" %>
+   </footer>
+
+</body>
