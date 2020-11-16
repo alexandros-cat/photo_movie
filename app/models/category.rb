@@ -6,7 +6,8 @@ self.data = [
     { id: 4, name:'Sea' },
     { id: 5, name:'Field' },
     { id: 6, name:'Mountain' },
-    { id: 7, name:'Other' },
+    { id: 7, name:'Star' },
+    { id: 8, name:'Other' },
 ]
 
 include ActiveHash::Associations
