@@ -6,7 +6,7 @@
 
   <div id="newer" class="posts-main">
     <h2 class="posts-title">投稿内容を入力</h2>
-  <%= form_with(model:@post,url: home_posts_path, local: true )do |f| %>
+  <%= form_with(model:@post,url: posts_path, local: true )do |f| %>
     
      
     <%= render 'shared/error_messages', model: f.object %>

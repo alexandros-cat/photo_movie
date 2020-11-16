@@ -4,11 +4,11 @@
   <%= render "shared/header" %>
   </header>
 
-  <form id="form1" action="自分のサイトURL">
+  <form id="form1" action="#">
     <input id="sbox"  id="s" name="s" type="text" placeholder="キーワードを入力" />
     <input id="sbtn" type="submit" value="検索" />
   </form>
-  
+
   <div id = "wrap">
     <div class ="content"> 
       <h1>A video post site</h1> 
@@ -18,7 +18,7 @@
          <li class='list'>
           <%= video_tag post.movie, controls: true, autobuffer: true, loop: true, class: "post-img" %>
          
-        <%= link_to "#", method: :get do %> 
+        <%= link_to  post_path(post.id), method: :get do %> 
           <div class='post-info'>
             <h3 class='post-title'>
               title:<%=post.title %>
@@ -34,7 +34,7 @@
   </div> 
   <% if user_signed_in? %>
     <div class='post-btn'>
-    <%=link_to "/home/:home_id/posts/new" do%>
+    <%=link_to "   /posts/new" do%>
       <span class='post-btn-text'>POST</span>
       <%end%>
     </div>   
@@ -44,4 +44,3 @@
   <%= render "shared/footer" %>
    </footer>
 </body>
-<%# home_post_path(post.id) %>

@@ -13,4 +13,12 @@ class Post < ApplicationRecord
   with_options numericality: { other_than: 1 } do
   validates :category_id
   end  
+
+  def self.search(search)
+    if search != ""
+      Post.where('title LIKE(?)', "%#{search}%")
+    else
+      Post.all
+    end
+  end
 end

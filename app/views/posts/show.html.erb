@@ -3,37 +3,41 @@
   <header>
   <%= render "shared/header" %>
   </header>
-
+<div id="ho" class="post-show">
+   <div class="post-box">
     <div class='post-img-content'>
      <%= video_tag @post.movie, controls: true, autobuffer: true, class:"post-box-img" %>
     </div>       
-    
     <h2 class="name">
       <%= @post.title %>
     </h2>
-
     <table class="detail-table">
       <tbody>
-         <tr>
-          <th class="detail-post">content</th>
-          <td class="detail-value"><%=@post.content %>
+        <tr>
+          <th class="detail-post">POSTER</th>
+          <td class="detail-value"><%= @post.user.nickname %>
         </tr>
         <tr>
-          <th class="detail-post">category</th>
+          <th class="detail-post">CATEGORY</th>
           <td class="detail-value"><%= @post.category.name %>
         </tr>
+        <tr>
+          <th class="detail-post">CAPTION</th>
+          <td class="detail-value"><%= @post.content %>
+        </tr>
       </tbody>
-    </table> 
+    </table>
 
-    <%if user_signed_in? && @post.user.id == current_user.id%>
-      <%= link_to 'update',edit_home_post_path,  method: :get, class: "post-btn" %>
-    <p class='or-text'>or</p>> 
-      <%= link_to 'delete', home_post_path, method: :delete, class:'post-destroy' %>
-    <%else%>
-    <%end%>  
-
-  <footer>
+    <%# ログインしていて、なおかつ、ログインしているユーザと投稿しているユーザが同一人物でないとき表示しましょう。 %>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
+    <%= link_to 'EDIT', edit_post_path(@post.id), method: :get, class: "post-red-btn" %> 
+    <p class='or-text'>or</p>
+    <%= link_to 'DELETE', post_path(@post.id), method: :delete, class:'post-destroy' %>
+    <% end %>
+    <%# //ログインしていて、なおかつ、ログインしているユーザと投稿しているユーザが同一人物でないとき表示しましょう。 %>
+    
+  </div>
+   <footer>
   <%= render "shared/footer" %>
    </footer>
-
 </body>

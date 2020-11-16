@@ -198,9 +198,11 @@
   align-items: center;
   flex-direction: column;
   min-width: 500px;
+
 }
 #post .content {
   width: 300px;
+  margin-top: 10px;
 }
 .list {
   list-style: none;
@@ -226,7 +228,7 @@
 /* 投稿の概要 */
 
 .post-show {
-  background-color: #f8f8f8;
+ 
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -235,7 +237,7 @@
 }
 
 .post-box {
-  background-color: #fff;
+  
   width: 70vw;
   min-width: 1200px;
   padding: 10vh 15vw;
@@ -254,7 +256,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background-color: rgb(205, 202, 202);
+  
   object-fit: contain;
 }
 
