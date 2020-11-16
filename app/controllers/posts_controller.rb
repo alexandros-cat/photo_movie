@@ -17,7 +17,7 @@ class PostsController < ApplicationController
        post.save
        redirect_to home_posts_path
     else
-       render 'new'
+      render 'new'
     end  
   end
 

@@ -8,7 +8,8 @@
     <h2 class="posts-title">投稿内容を入力</h2>
   <%= form_with(model:@post,url: home_posts_path, local: true )do |f| %>
     
-     <%=render 'shared/error_messages',model:  f.object %> 
+     
+    <%= render 'shared/error_messages', model: f.object %>
     
     <%# 投稿動画 %>
     <div class="img-upload">
@@ -53,6 +54,7 @@
       </div>
     </div>
      <%# カテゴリー %>
+     
      <%# 下部ボタン %>
      <div class="post-btn-contents">
       <%= f.submit "Post" ,class:"posts-btn" %>
