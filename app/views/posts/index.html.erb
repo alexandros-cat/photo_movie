@@ -7,6 +7,7 @@
   <div id = "wrap">
     <div class ="content"> 
       <h1>A video post site</h1> 
+     </div>   
     <ul class='post-lists'>
       <% @posts.each do |post| %>
          <li class='list'>
@@ -25,7 +26,6 @@
            </li>
        <%end%>
       </ul>
-    </div> 
   </div> 
   <% if user_signed_in? %>
     <div class='post-btn'>

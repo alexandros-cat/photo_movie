@@ -55,7 +55,7 @@
 #post #wrap a {
   margin-left: 150px;
 }
-/* -----------------new---------------------------- */
+/* -----------------新規投稿---------------------------- */
 
 
 /* 共通 */
@@ -205,6 +205,11 @@
 .list {
   list-style: none;
 }
+.post-lists li {
+  float:left;
+  list-style: none;
+ margin: 0 50px 20px 0;
+}
 
 .post-lists>.list {
   width: 35vh;
@@ -215,7 +220,9 @@
   width: 33vh;
   height: 20vh;
   }
-/* ------------------------------------- */
+/* -----------------新規投稿---------------------------- */
+
+/*-------投稿の詳細を確認-------------------------------- */ 
 /* 投稿の概要 */
 
 .post-show {
@@ -302,75 +309,5 @@
 }
 /* -------投稿の詳細を確認------------------------------ */
 
-/* 商品の概要 */
 
 
-.post-box {
-  background-color: #FFF;
-  width: 70vw;
-  min-width: 1200px;
-  padding: 10vh 15vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.post-box>.name {
-  text-align: center;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.post-box-img {
-  height: 50vh;
-  width: 60vw;
-  min-height: 500px;
-  background-color: rgb(205, 202, 202);
-  object-fit: contain;
-}
-
-.detail-table {
-  margin-bottom: 30px;
-  width: 100%;
-}
-
-.detail-item {
-  width: 20%;
-  background-color: #eee;
-  border: 1px solid #dedede;
-  font-size: 14px;
-  text-align: center;
-}
-
-.detail-value {
-  width: 80%;
-  padding: 20px;
-  border: 1px solid #dedede;
-  font-size: 14px;
-}
-
-
-.post-btn2 {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #FFF;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
-}
-
-.or-text {
-  font-size: 20px;
-}
-
-.post-destroy {
-  background-color: lightgray;
-  text-align: center;
-  font-size: 24px;
-  color: black;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
-}
-.or-text {
-  font-size: 20px;
-}
