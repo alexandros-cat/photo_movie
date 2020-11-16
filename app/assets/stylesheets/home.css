@@ -33,23 +33,16 @@ a:hover {
   text-decoration: underline;
 }
 
-  header {
-    width: 960px;
-    height: 100px;
-    margin: 0 auto;
-    font-size:50px ;
-    font-family: 'Bitter', serif;
-  }
-
-.logo {
-  float: left;
-  margin-top: 50px;
+header {
+height: 100px;
+margin: 0 auto;
+font-size:50px ;
+font-family: 'Bitter', serif;
 }
-
 
 .global-nav {
   float: right;
-  margin-top: 60px;
+
 }
 
 .global-nav li {
@@ -66,7 +59,7 @@ a:hover {
   color: aqua;
 }
 .global-nav li a {
-  color: #ffffff;
+  color:white;
 }
 
 .global-nav li a:hover {
