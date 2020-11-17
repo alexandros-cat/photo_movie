@@ -1,5 +1,5 @@
 #shared {
-  background-image: url("panorama.png");
+  background-image: url("ice.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -11,6 +11,9 @@
   margin: 60px auto;
   padding: 200px;
   border-radius: 5px;
+  border: 1px solid gold;
+  background-color:rgba(51,153,255,0.5);
+  
 }
 .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
   float: left;
