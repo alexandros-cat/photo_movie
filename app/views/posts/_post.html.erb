@@ -1,0 +1,14 @@
+  <li class='list'>
+    <%= video_tag post.movie, controls: true, autobuffer: true, loop: true, class: "post-img" %>
+    
+  <%= link_to  post_path(post.id), method: :get do %> 
+    <div class='post-info'>
+      <h3 class='post-title'>
+        title:<%=post.title %>
+      </h3>
+  <%end %>    
+      <div class='post-category'>
+        <span>category：<%= post.category.name%></span>
+      </div>
+    </div>
+</li>

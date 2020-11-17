@@ -8,20 +8,20 @@
     <input id="sbox"  id="s" name="s" type="text" placeholder="キーワードを入力" />
     <input id="sbtn" type="submit" value="検索" />
   </form>
-
+  
   <div id = "wrap">
     <div class ="content"> 
       <h1>A video post site</h1> 
      </div>   
     <ul class='post-lists'>
       <% @posts.each do |post| %>
-        <%= render partial: "posts/post", locals: { post: post } %>    
+    <%= render partial: "posts/post", locals: { post: post } %>    
        <%end%>
       </ul>
   </div> 
   <% if user_signed_in? %>
     <div class='post-btn'>
-    <%=link_to "   /posts/new" do%>
+    <%=link_to "  /posts/new" do%>
       <span class='post-btn-text'>POST</span>
       <%end%>
     </div>   

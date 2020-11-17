@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   before_action :set_post, only: [:edit, :update, :show, :destroy]
-
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @posts = Post.all
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
       post = Post.new(post_params)
     if post.valid? 
        post.save
-       redirect_to home_posts_path
+       redirect_to posts_path
     else
       render 'new'
     end  
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
   
     if @post.update(post_params)
-       redirect_to home_posts_path
+       redirect_to posts_path
     else
        render 'edit'
     end 
@@ -60,4 +60,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
+  end
+  
 end
