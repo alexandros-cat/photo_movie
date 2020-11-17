@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   belongs_to_active_hash :category
   belongs_to :user
   mount_uploader :movie, MovieUploader
+  has_many :comments  # commentsテーブルとのアソシエーション
 
   with_options presence: true do
     validates :movie

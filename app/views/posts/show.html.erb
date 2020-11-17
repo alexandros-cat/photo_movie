@@ -14,19 +14,41 @@
     <table class="detail-table">
       <tbody>
         <tr>
-          <th class="detail-post">POSTER</th>
+          <th class="detail-post">Nick name</th>
           <td class="detail-value"><%= @post.user.nickname %>
         </tr>
         <tr>
-          <th class="detail-post">CATEGORY</th>
-          <td class="detail-value"><%= @post.category.name %>
+          <th class="detail-post">Content</th>
+          <td class="detail-value"><%= @post.content %>
         </tr>
         <tr>
-          <th class="detail-post">CAPTION</th>
-          <td class="detail-value"><%= @post.content %>
+          <th class="detail-post">Category</th>
+          <td class="detail-value"><%= @post.category.name %>
         </tr>
       </tbody>
     </table>
+   <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+ 
+  <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+       </div>  
+    </div>
 
     <%# ログインしていて、なおかつ、ログインしているユーザと投稿しているユーザが同一人物でないとき表示しましょう。 %>
     <% if user_signed_in? && current_user.id == @post.user_id %>
