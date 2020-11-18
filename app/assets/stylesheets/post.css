@@ -234,7 +234,9 @@
   flex-direction: column;
   align-items: center;
   padding: 5vh 0;
+   
 }
+
 
 .post-box {
   
@@ -244,7 +246,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:white
+  background   : linear-gradient(135deg, #ff7f7f, #ffff1a, #66ff66);
 }
 
 .psot-box>.name {
@@ -319,13 +321,26 @@
 .container {
   margin: 20px 0;
   padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
   box-sizing: border-box;
   width: 75vw;
 }
-.comments{
-   margin-left: 500px;
 
-   
+.container textarea {
+  width:100%;
+  height:5%; 
+}
+.container input[type=submit] {
+  margin-left: 50%;
+  background-color: #66ff66;
+  width: 60px;
+}
+
+.comments{
+  margin-left: 40%;
+}
+
+.comments p a{
+  margin-left: 50px;
+  color: #000000;
 }
