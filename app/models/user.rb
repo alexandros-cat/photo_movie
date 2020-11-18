@@ -10,6 +10,7 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX
   validates :password, presence: true, confirmation: true
+  validates :nickname, presence: true, length: { maximum: 6 }
   
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
