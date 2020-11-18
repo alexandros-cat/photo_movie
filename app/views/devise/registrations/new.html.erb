@@ -18,7 +18,7 @@
           <div class='field-input'>
              <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
           </div>
-        </div>
+        
         <div class='field'>
           <div class='field-label'>
             <%= f.label :email%>
@@ -27,28 +27,34 @@
             <%= f.email_field :email%>
           </div>
         </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :password%>
-            <i>(英数字6文字以上)</i>
+        <%if @sns_id.present? %>
+          <%= hidden_field_tag :sns_auth, true %>
+          <% else %>
+          <div class="field">
+           <div class='field-label'>
+            <%= f.label :password %>
+              <% @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <div class='field-input'>
+            <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
           </div>
-          <div class='field-input'>
-            <%= f.password_field :password, autocomplete: "off"%>
+          <div class="field">
+            <div class='field-label'>
+              <%= f.label :password_confirmation %>
+               </div>
+              <div class='field-input'>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
           </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :password_confirmation%>
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :password_confirmation, autocomplete: "off"%>
-          </div>
-        </div>
+       <% end %>
         <div class='actions'>
           <%= f.submit "Create Account", class: 'btn'%>
         </div>
-      </div>
+        </div>
+        </div>
     <% end %>
+    
   </div>
 </div>
 <footer>
