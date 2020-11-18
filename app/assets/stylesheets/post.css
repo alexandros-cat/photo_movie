@@ -313,25 +313,9 @@
 }
 /* -------投稿の詳細を確認------------------------------ */
 
-form textarea {
-  width: 100%;
-  margin: 5px 0 15px;
-  padding: 10px;
-  border: 1px solid #D8D8D8;
-  border-radius: 5px;
-  font-family: "游ゴシック", "YuGothic";
-}
 
-form input[type="submit"] {
-  background-color: #57e9e9;
-  border-radius: 20px;
-  color: #fff;
-  border: 0;
-  font-size: 18px;
-  width:100px;
-  margin-left: 500px;
   
-}
+
 .container {
   margin: 20px 0;
   padding: 30px;
