@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   belongs_to :user
   mount_uploader :movie, MovieUploader
   has_many :comments  # commentsテーブルとのアソシエーション
-
+  has_many :likes
   with_options presence: true do
     validates :movie
     validates :title
@@ -14,7 +14,7 @@ class Post < ApplicationRecord
   with_options numericality: { other_than: 1 } do
   validates :category_id
   end  
-
+  
   def self.search(search)
     if search != ""
       Post.where('title LIKE(?)', "%#{search}%")

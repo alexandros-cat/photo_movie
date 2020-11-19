@@ -1,0 +1,3 @@
+<%# app/views/likes/destroy.js.erb %>
+
+document.getElementById('post_<%= @post.id %>').innerHTML = '<%= j(render @post) %>'

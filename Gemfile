@@ -65,3 +65,4 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem "pry-rails"
 gem 'rspec-rails', '~> 4.0.0'
+gem 'font-awesome-sass'

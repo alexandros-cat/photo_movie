@@ -21,7 +21,9 @@
      </div>   
     <ul class='post-lists'>
       <% @posts.each do |post| %>
-        <%= render partial: "posts/post", locals: { post: post } %>    
+      <tr id="post_<%= post.id %>">
+       <%= render 'post', post: post %>
+      </tr> 
        <%end%>
       </ul>
   </div> 

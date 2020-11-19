@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :posts   
   has_many :comments  # commentsテーブルとのアソシエーション
   has_many :sns_credentials
+  has_many :likes
   validates :nickname, presence: true
   validates :email, presence: true
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
@@ -23,6 +24,9 @@ class User < ApplicationRecord
       sns.save
     end
     { user: user, sns: sns }
+  end
+  def liked_by?(post_id)
+    likes.where(post_id: post_id).exists?
   end
 
 end

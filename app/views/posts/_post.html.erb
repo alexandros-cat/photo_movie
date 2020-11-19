@@ -1,4 +1,4 @@
-  <li class='list'>
+<li class='list'>
     <%= video_tag post.movie, controls: true, autobuffer: true, loop: true, class: "post-img" %>
     
   <%= link_to  post_path(post.id), method: :get do %> 
@@ -6,9 +6,20 @@
       <h3 class='post-title'>
         title:<%=post.title %>
       </h3>
-  <%end %>    
+     <%end %>    
       <div class='post-category'>
         <span>category：<%= post.category.name%></span>
       </div>
+      <% if current_user.liked_by?(post.id) %>
+        <td><%= link_to destroy_like_path(post), class: "like-link", method: :DELETE, remote: true do %>
+            <i class="fa fa-heart unlike-btn"></i>
+            <% end %>
+            <%= post.likes.count %></td>
+       <% else %>
+         <td><%= link_to create_like_path(post), class: "like-link", method: :POST, remote: true do %>
+                <i class="fa fa-heart like-btn"></i>
+              <% end %>
+           <%= post.likes.count %></td>
+       <% end %>
     </div>
 </li>
