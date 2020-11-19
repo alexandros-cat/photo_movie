@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   }
   root to: "home#index"
   resources :concept, only: :index
+  resources :favorites, only: :index
   resources :posts do 
     resources :comments, only: :create
     collection do
