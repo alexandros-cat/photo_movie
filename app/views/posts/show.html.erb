@@ -27,26 +27,17 @@
         </tr>
       </tbody>
     </table>
-     <div class="option">
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>お気に入り 0</span>
-      </div>
-      <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>不適切な商品の通報</span>
-      </div>
-    </div>
-  </div>
+    
    <div class="container">
-    <% if user_signed_in? %>
+    <% if current_user %>
       <%= form_with(model: [@post, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2", class:"text_box" %>
+        <%= form.submit "投稿する" , class: "comment-btn"%> 
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
+  
  
   <div class="comments">
       <h4>＜コメント一覧＞</h4>

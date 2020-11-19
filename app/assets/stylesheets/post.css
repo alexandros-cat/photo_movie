@@ -234,9 +234,8 @@
   flex-direction: column;
   align-items: center;
   padding: 5vh 0;
-   
+  background   : white; 
 }
-
 
 .post-box {
   
@@ -246,10 +245,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background   : linear-gradient(135deg, #ff7f7f, #ffff1a, #66ff66);
+ 
+
 }
 
-.psot-box>.name {
+.post-box>.name {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
@@ -315,42 +315,56 @@
 }
 /* -------投稿の詳細を確認------------------------------ */
 
-
-  
-
+ 
 .container {
-  margin: 20px 0;
-  padding: 30px;
-  background-color: white;
-  box-sizing: border-box;
-  width: 75vw;
+  width: 40vw;
+  background-color: #fff;
+  margin: 5vh 0;
+  text-align: center;
 }
 
-.container textarea {
-  width:100%;
-  height:5%; 
-}
-.container input[type=submit] {
-  margin-left: 50%;
-  background-color: #66ff66;
-  width: 60px;
+.text_box {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: solid 2px #dedede;
+  resize: none;
 }
 
-.comments{
-  margin-left: 40%;
+
+.comment-btn{
+  line-height: 48px;
+  background-color: #3CCACE;
+  border: 1px solid #3CCACE;
+  color: #fff;
+  width: 50%;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 100px;
+  margin-bottom: 2vh;
 }
 
-.comments p a{
-  margin-left: 50px;
-  color: #000000;
+.comments h4 {
+    border-bottom: 2px solid #3CCACE;
+    background-color: #3CCACE;
+    color: #fff;
+    font-size: larger;
+    border-radius: 15px;
+    margin: 0 5vh;
+    text-align: center;
+
 }
+/* お気に入り */
 .option {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 
-.favorite-btn {
+
+
+.favorite-on-btn{
+  background: #ffdca8;
   border-radius: 40px;
   width: 15vw;
   min-width: 200px;
@@ -360,11 +374,34 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  text-decoration: none;
+  padding: 1vh 0;
+}
+
+.favorite-off-btn{
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+  color: rgb(249, 75, 0);
+  border: 2px solid #ffb340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  text-decoration: none;
+  padding: 1vh 0;
 }
 
 .favorite-star-icon {
   margin-right: 5px;
 }
+
+.favorite-text{
+  text-decoration: none;
+  color: #f94b00;
+}
+
+/* /お気に入り */
 
 .report-btn {
   border-radius: 40px;
