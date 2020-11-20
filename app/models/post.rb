@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
   belongs_to :user
+  has_many :favorites, dependent: :destroy
   mount_uploader :movie, MovieUploader
   has_many :comments  # commentsテーブルとのアソシエーション
   has_many :likes

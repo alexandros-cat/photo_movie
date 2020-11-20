@@ -1,0 +1,24 @@
+<body id="favorite">
+   
+    <header>
+     <%= render "shared/header" %>
+    </header>
+   
+<%# お気に入り商品一覧 %>
+<div class='post-under-contents'>
+  <h2 class='mypage_title'><%= @nickname %>さんのお気に入り</h2>
+  <ul class='post-lists'>
+    <%# 商品一覧 %>
+     <%# <%= render"shared/index", posts: @f_posts, favorites: @favorites %>
+     
+    <%# /商品一覧 %>
+  </ul>
+</div>
+<%# お気に入り商品一覧 %>
+      
+    <footer>
+       <%= render "shared/footer" %>
+    </footer>
+   
+</body>
+

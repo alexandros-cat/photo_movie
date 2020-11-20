@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: "home#index"
-  resources :users, only: :index
+  resources :users
+  resources :concept, only: :index
   resources :posts do 
     resources :comments, only: :create
     collection do

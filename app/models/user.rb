@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :comments  # commentsテーブルとのアソシエーション
   has_many :sns_credentials
   has_many :likes
+  has_many :favorites
   validates :nickname, presence: true
   validates :email, presence: true
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
