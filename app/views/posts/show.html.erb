@@ -28,7 +28,25 @@
       </tbody>
     </table>
    
-   
+     <% if user_signed_in? %>
+      <div class="option">
+        <%# お気に入りボタン %>
+        <div id="favorites_buttons_<%= @post.id %>">
+          <% if @post.favorites.where(user_id: current_user.id).exists? %>
+          <div class="favorite-btn favorite-on-btn" id="good-btn" data-id=<%= @post.id %> >
+            <%= link_to 'お気に入り', post_favorites_path(@post.id), class: 'favorite-text', method: :delete, remote: true %>
+           </div>
+          <% else %>
+          <div class="favorite-btn favorite-off-btn" id="good-btn" data-id=<%= @post.id %> >
+           <%= link_to 'お気に入り', post_favorites_path(@post.id), class: 'favorite-text', method: :post, remote: true %>
+          </div>
+          <% end %>
+        </div>
+        <%# /お気に入りボタン %>
+       
+      </div>
+    <% end %>
+  
     
    <div class="container">
     <% if current_user %>
@@ -41,7 +59,7 @@
     <% end %>
   
  
-  <div class="comments">
+   <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
