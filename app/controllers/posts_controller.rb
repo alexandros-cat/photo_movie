@@ -47,6 +47,18 @@ class PostsController < ApplicationController
     end
   end  
   
+  def checked
+  
+    post = Post.find(params[:id])
+    if post.checked
+      post.update(checked: false)
+    else
+      post.update(checked: true)
+    end
+    post = Post.find(params[:id])
+    render json: { Post: post }
+  end
+
   def search
     @posts = Post.search(params[:keyword])
   end

@@ -26,6 +26,7 @@ class User < ApplicationRecord
     end
     { user: user, sns: sns }
   end
+  
   def liked_by?(post_id)
     likes.where(post_id: post_id).exists?
   end

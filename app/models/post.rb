@@ -19,12 +19,16 @@ class Post < ApplicationRecord
   def like_user(user_id)
     likes.find_by(user_id: user_id)
    end
-   
+
   def self.search(search)
     if search != ""
       Post.where('title LIKE(?)', "%#{search}%")
     else
       Post.all
     end
+  end
+
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
   end
 end

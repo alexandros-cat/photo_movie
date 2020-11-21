@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_11_20_042340) do
     t.integer "category_id", null: false
     t.integer "user_id", null: false
     t.string "movie", null: false
+    t.boolean "checked"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
