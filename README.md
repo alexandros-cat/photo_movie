@@ -10,7 +10,6 @@
 - has many posts
 - has many comments
 - has many likes
-- has many sns_credentials
 - has_many :favorites
 - has_many :fav_posts, through: :favorites, source: :post
 
@@ -44,15 +43,6 @@
 ### Association
 - belongs_to :user
 - belongs_to :post
-
-## sns_credentialsテーブル
-| Column        | Type   | Options                       |
-|---------------|--------| ------------------------------|
-| provider      |string  |  null: false                  |
-| uid           |string  |  null: false                  |
-| user_id       |integer | null: false, foreign_key: true|
-### Association
-- belongs_to :user
 
 
 ## likeテーブル
