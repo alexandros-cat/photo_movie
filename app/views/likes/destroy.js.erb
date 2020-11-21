@@ -1,3 +1,1 @@
-<%# app/views/likes/destroy.js.erb %>
-
-document.getElementById('post_<%= @post.id %>').innerHTML = '<%= j(render @post) %>'
+$('#likes_buttons<%= @post.id %>').html("<%= j(render partial: 'likes/like', locals: {post: @post, like: @like}) %>");

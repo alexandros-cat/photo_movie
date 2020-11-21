@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :posts do 
     resources :comments, only: :create
     resource :favorites, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
     collection do
       get 'search'
     end

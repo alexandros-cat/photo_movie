@@ -417,3 +417,7 @@
 .report-flag-icon {
   margin-right: 5px;
 }
+.comments a {
+  color: #000000;
+  font-weight: 100;
+}
