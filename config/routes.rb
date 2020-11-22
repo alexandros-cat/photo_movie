@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :users
   resources :concept, only: :index
   resources :posts do 
+    member do
+      get 'checked'
+    end
     resources :comments, only: :create
     resource :favorites, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]

@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @favorites = Favorite.all
   end
 
   def new
