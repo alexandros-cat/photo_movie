@@ -12,8 +12,6 @@
 - has many likes
 - has_many :favorites
 
-
-
 ## postsテーブル
 | Column           | Type   | Options                       |
 |------------------|--------|-------------------------------|
