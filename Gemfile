@@ -59,7 +59,6 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'active_hash'
-gem 'ransack'
 gem "pry-rails"
 gem 'rspec-rails', '~> 4.0.0'
 gem 'font-awesome-sass'
