@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
-  before_action :set_post, only: [:edit, :update, :show, :destroy]
-  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :set_post, only: [:edit, :update, :show, :destroy ]
+  before_action :move_to_index, except: [:index, :show, :search ]
 
   def index
     @posts = Post.all
@@ -49,13 +49,13 @@ class PostsController < ApplicationController
   
   def checked
   
-    post = Post.find(params[:id])
-    if post.checked
-      post.update(checked: false)
+    @post = Post.find(params[:id])
+    if @post.checked
+      @post.update(checked: false)
     else
-      post.update(checked: true)
+      @post.update(checked: true)
     end
-    post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     render json: { Post: post }
   end
 
