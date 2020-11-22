@@ -70,7 +70,7 @@ font-family: 'Bitter', serif;
 
 #wrap {
   clear: both;
-  background-color: #ffffff;
+  background-color: transparent;
   margin-top: 220px;
   padding: 35px 0;
 }
@@ -94,7 +94,7 @@ footer small {
   font-size: 12px;
 }
 .btn a {
-  background-color: #009cd3;
+  background-color: #44e923;
   color: #ffffff;
   font-size: 20px;
   font-family: 'Bitter', serif;
@@ -108,8 +108,8 @@ footer small {
   border: 3px solid #009cd3;
 }
 
-#home li .btn {
-  background-color: #009cd3;
+#shared li .btn {
+  background-color: #00d30b;
   color: #ffffff;
   font-size: 20px;
   font-family: 'Bitter', serif;
@@ -129,7 +129,7 @@ footer small {
 }
 
 
-#home {
+#shared {
   background-image: url("sky.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -137,7 +137,7 @@ footer small {
   background-size: cover;
 }
 
-#home #wrap {
+#shared #wrap {
   background-color: transparent;
   margin-top: 0;
   padding: 0;
@@ -147,7 +147,7 @@ footer small {
   margin-left: 150px;
 }
 
-#home h1 {
+#shared h1 {
   font-size: 90px;
   line-height: 1;
   color: #ffffff;
@@ -156,11 +156,11 @@ footer small {
   border: none;
 }
 
-#home .content {
+#shared .content {
   margin-top: 150px;
 }
 
-#home p {
+#shared p {
   font-size: 16px;
   color: #ffffff;
 }

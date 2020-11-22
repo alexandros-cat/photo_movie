@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
   end
@@ -58,6 +59,8 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     render json: { Post: post }
   end
+
+  
 
   def search
     @posts = Post.search(params[:keyword])
