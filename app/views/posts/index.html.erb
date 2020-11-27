@@ -4,16 +4,7 @@
   <%= render "shared/header" %>
   </header>
 
-  <%# <form id="form1" >
-    <input id="sbox"  id="s" name="s" type="text" placeholder="キーワードを入力" />
-    <input id="sbtn" type="submit" value="検索" />
-  </form> %>
-   <%= form_with(url: search_posts_path , local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "search for keywords", class: "input-box" %>
-      <button class="search-button">
-       <%= image_tag "search.png", class:"search-icon" %>
-      </button>
-    <% end %>
+      <%= render "search_form" %>
 
   <div id = "wrap">
     <div class ="content"> 

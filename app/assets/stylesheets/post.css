@@ -12,7 +12,7 @@
 }
 
 .post-title {
-  font-size: 2.5vh;
+  color:black;
 }
 
 .post-category {
@@ -173,6 +173,7 @@ x
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
+  text-decoration: none;
 }
 
 
@@ -191,6 +192,7 @@ x
   min-width: 450px;
   padding: 15vh 15vw;
   margin: 50px 50px;
+  margin-left: 400px;
 } 
 .posts-contents{
   font-family: 'Bitter', serif;
@@ -236,6 +238,7 @@ x
   align-items: center;
   padding: 5vh 0;
   background   : white; 
+  opacity: 0.9;
 }
 
 .post-box {
