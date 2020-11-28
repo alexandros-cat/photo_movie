@@ -1,12 +1,10 @@
  <% if @post.favorites.where(user_id: current_user.id).exists? %>
     
      <div class="favorite-btn favorite-on-btn" id="good-btn" data-id=<%= @post.id %>data-check=<%= @post.checked %>>
-      <%= image_tag "dark_star.png", class:"favorite-star-icon", width:"20", height:"20" %>
       <%= link_to 'お気に入り', post_favorites_path(@post.id), class: 'favorite-text', method: :delete, remote: true %>
     </div>
     <% else %>
     <div class="favorite-btn favorite-off-btn" id="good-btn" data-id=<%= @post.id %>data-check=<%= @post.checked %>>
-      <%= image_tag "dark_star.png", class:"favorite-star-icon", width:"20", height:"20" %>
       <%= link_to 'お気に入り', post_favorites_path(@post.id), class: 'favorite-text', method: :post, remote: true %>
     </div>
 <% end %>
