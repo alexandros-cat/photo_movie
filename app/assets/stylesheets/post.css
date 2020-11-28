@@ -425,3 +425,6 @@ x
   color: #000000;
   font-weight: 100;
 }
+div[data-check="true"] {
+  background: #585555;
+}

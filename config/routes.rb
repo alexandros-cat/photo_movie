@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     member do
       get 'checked'
     end
+    get 'posts/:id', to: 'posts#checked'
     resources :comments, only: :create
     resource :favorites, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
